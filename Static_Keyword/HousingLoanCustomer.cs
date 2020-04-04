@@ -9,15 +9,23 @@ namespace Static_Keyword
         public int CustomerId { get; set; }
         public string Name { get; set; }
         public double LoanAmount { get; set; }
-        public double ROI { get; set; }
+        static double ROI { get; set; }
 
 
-        public HousingLoanCustomer(int CustomerId, string Name, double LoanAmount, double ROI)
+        static HousingLoanCustomer()
+        {
+            ROI = 7.5;
+        }
+        public HousingLoanCustomer(int CustomerId, string Name, double LoanAmount)
         {
             this.CustomerId = CustomerId;
             this.Name = Name;
             this.LoanAmount = LoanAmount;
-            this.ROI = ROI;
+        }
+
+        public void CalculateIntrest()
+        {
+            double Intrest = (LoanAmount * ROI) / 100;
         }
     }
 }
