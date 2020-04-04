@@ -19,8 +19,11 @@ namespace Static_Keyword
             LoadnCustomer2.CalculateIntrest(1);
 
             Console.ReadKey();
- 
-                
+
+
+           // var a = Calculation();           statinc class can´t be referenced or use objects
+
+
         }
     }
 }
